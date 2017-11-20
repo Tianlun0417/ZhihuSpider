@@ -24,7 +24,7 @@ def getLinks(pageUrl):
         getAllAns(link)
 
 def getAllAns(target_url):
-    driver = webdriver.PhantomJS(executable_path="C:/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+    driver = webdriver.PhantomJS(executable_path="YOUR OWN PATH")
     clickSuccess = False
     while (not clickSuccess):
         driver.get(target_url)
@@ -71,4 +71,5 @@ def getAllAns(target_url):
     finally:
         driver.close()
 
+#Enter point
 getLinks("https://www.zhihu.com/topic/19874105/top-answers")
