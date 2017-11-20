@@ -7,6 +7,8 @@ import time
 pages = set()  # initialise Pages set
 answers = set()
 
+#get all urls questions posted on the page
+#and get all anwsers for each question
 def getLinks(pageUrl):
     global pages
     html = urlopen(pageUrl)
@@ -23,6 +25,7 @@ def getLinks(pageUrl):
     for link in pages:
         getAllAns(link)
 
+#get all posts under a question
 def getAllAns(target_url):
     driver = webdriver.PhantomJS(executable_path="YOUR OWN PATH")
     clickSuccess = False
@@ -72,4 +75,4 @@ def getAllAns(target_url):
         driver.close()
 
 #Enter point
-getLinks("https://www.zhihu.com/topic/19874105/top-answers")
+getLinks("Target url of a Topic")
